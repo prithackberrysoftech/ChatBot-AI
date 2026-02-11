@@ -1,0 +1,303 @@
+:root {
+  --color-one: #852fff;
+  --color-two: #ffffff;
+  --color-three: #c5c5c5;
+  --text-one: 65px;
+  --text-tow: 60px;
+  --text-three: 40px;
+  --text-four: 18px;
+  --text-five: 16px;
+  --text-six: 10px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(#11071f, #371f5a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-two);
+  font-size: var(--text-five);
+}
+button {
+  padding: 9px 30px;
+}
+main {
+  height: 100%;
+}
+/* animathin */
+
+  /* Large blurred ring */
+  .background-ring {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;       /* size of the ring */
+    height: 100%;
+    border: 50px solid rgba(105, 9, 184, 0.13); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(30px);  /* blur for soft glow */
+    z-index: -1;         /* behind all content */
+  }
+
+  /* Optional: add subtle animation (rotation) */
+  @keyframes rotateRing {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .background-ring {
+    animation: rotateRing 30s linear infinite;
+  }
+/* banner section */
+.banner-section {
+  text-align: center;
+  padding-top: 100px;
+}
+.banner-section h1 {
+  font-size: var(--text-tow);
+  color: var(--color-one);
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.banner-section h1 span {
+  font-size: var(--text-one);
+  color: #ffffff;
+}
+.banner-section p {
+  font-size: var(--text-five);
+  width: 45%;
+  margin: 0 auto;
+  color: var(--color-three);
+}
+/* sarvices section */
+.sarvices-section {
+  background-image: url(/assets/image/Gradient.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+.sarvices-card .services-cantent {
+  background-color: #2c1250;
+  background: linear-gradient(
+    #130428 7%,
+    #251043 34%,
+    #38126d 57%,
+    #261045 85%,
+    #190634 100%
+  );
+  padding: 60px 20px;
+  border-top: 3px solid var(--color-one);
+  border-radius: 20px;
+  height: 300px;
+  box-shadow: inset 0 -3em 3em rgba(86, 87, 86, 0.199),
+    0.3em 0.3em 1em rgba(104, 104, 104, 0.247);
+  text-align: center;
+  transition: transform 0.2s;
+}
+.sarvices-card .services-cantent:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.sarvices-card {
+  margin-bottom: 20px;
+}
+.row.sarvices-cards{
+  justify-content: center;
+}
+.sarvices-cards a {
+  text-decoration: none;
+  color: var(--color-two);
+}
+.sarvices-section h2 {
+  font-size: var(--text-three);
+  text-align: center;
+  padding-bottom: 20px;
+}
+.sarvices-card .services-cantent h3 {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+.sarvices-card .services-cantent p {
+  font-size: var(--text-five);
+  color: var(--color-three);
+}
+.sarvices-card .services-cantent img {
+  background-color: var(--color-one);
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+/* login form */
+.login-card {
+  background: linear-gradient(
+    #130428 7%,
+    #251043 34%,
+    #38126d 57%,
+    #261045 85%,
+    #190634 100%
+  );
+  box-shadow: inset 0 -3em 3em rgba(86, 87, 86, 0.3),
+    0.3em 0.3em 1em rgba(104, 104, 104, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 400px;
+  margin-top: 280px;
+}
+.login-card h3 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.btn-custom {
+  background: var(--color-one);
+  color: white;
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  background: #5a67d8;
+  color: #fff;
+}
+.form-control {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 10px;
+}
+.form-control:focus {
+  background-color: transparent;
+  color: #fff;
+}
+.form-control::placeholder {
+  color: #c5c5c5;
+}
+.form-control input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+}
+
+/* chat bot */
+.chat-box .container {
+  padding: 100px;
+}
+.chat-container {
+  position: absolute;
+  bottom: 0;
+}
+.chat-container input#userInput {
+  width: 1024px;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: var(--color-two);
+}
+.chat-container input#userInput::placeholder {
+  color: #ffffffbb;
+}
+.chat-footer {
+  background-color: #26104573;
+  padding: 5px;
+  border: 1px solid #852fff;
+  border-radius: 50px;
+  margin: 20px 0px;
+}
+.chat-container button#sendBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+}
+.message.bot-msg {
+  background-color: var(--color-one);
+  padding: 10px 20px;
+  border-radius: 100px;
+  display: flex; /* make message a flex container */
+  justify-content: flex-start; /* push content inside to right */
+  width: fit-content; /* shrink bubble to fit text */
+  margin-right: auto;
+}
+.message.user-msg {
+  background-color: #667eea;
+  padding: 10px 20px;
+  border-radius: 100px;
+  display: flex; /* make message a flex container */
+  justify-content: flex-end; /* push content inside to right */
+  width: fit-content; /* shrink bubble to fit text */
+  margin-left: auto;
+}
+/* chat-bot */
+.chat-title{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  background-image: linear-gradient(0deg, rgba(77, 0, 128, 0), rgb(77, 0, 128));
+}
+.chat-title h2{
+  padding: 40px 0px;
+  font-size: 50px;
+  text-align: center;
+}
+div#chatBody{
+  /* height: 790px;
+  overflow: scroll; */
+}
+div#chatBody::-webkit-scrollbar{
+  display: none;
+}
+/* media query */
+@media (max-width: 1440px) {}
+@media (max-width: 1024px) {
+  .sarvices-card .services-cantent{
+    padding: 15px 20px;
+    height: 270px;
+  }
+  .sarvices-card .services-cantent h3{
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  :root{
+    --text-one: 50px;
+    --text-tow: 45px;
+  }
+}
+@media (max-width: 425px) {
+  :root{
+    --text-one: 40px;
+    --text-tow: 35px;
+  }
+  .banner-section p{
+    width: 90%;
+  }
+  .sarvices-section{
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 375px) {
+      :root {
+        --text-one: 32px;
+        --text-tow: 30px;
+    }
+}
+@media (max-width: 320px) {
+  :root {
+        --text-one: 30px;
+        --text-tow: 27px;
+    }
+  .login-card{
+    margin-top: 60px;
+    width: 90%;
+    padding: 10px;
+  }
+}
