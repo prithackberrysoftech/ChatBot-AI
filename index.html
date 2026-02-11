@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- costum-style -->
+    <link rel="stylesheet" href="static/css/global.css">
+
+</head>
+
+<body>
+    <main>
+        <section class="banner-section">
+            <div class="container">
+                <h1>Step Into the World of <br> <span> Python AI</span> Demo</h1>
+                <p>a showcase of smart, interactive AI projects built with Python to demonstrate real-world applications
+                    in an easy and engaging way.</p>
+            </div>
+        </section>
+        <section class="sarvices-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="row sarvices-cards">
+                    <a href="index2.html"  class="col-lg-3 col-md-6 col-sm-12 sarvices-card" >
+                        <div class="services-cantent">
+                            <img src="static/images/chatbot.png" alt="">
+                            <h3>Text & Chat AI</h3>
+                            <p>A simple chatbot with NLP (e.g., NLTK, spaCy, or a small transformer model).</p>
+                            </div>
+                       
+                    </a>
+                    <a href="#" onclick="openVideo('static/video/Voice Bot.mp4')" class="col-lg-3 col-md-6 col-sm-12 sarvices-card">
+                        <div class="services-cantent">
+                            <img src="static/images/chat-bot.png" alt="">
+                            <h3>Voice & Speech AI</h3>
+                            <p>Convert user text into natural voice (gTTS or pyttsx3).</p>
+                        </div>
+                    </a>
+                    <a href="#" onclick="openVideo('static/video/AI Image Caption Generator - Google Chrome 2026-02-11 16-50-24.mp4')" class="col-lg-3 col-md-6 col-sm-12 sarvices-card">
+                        <div class="services-cantent">
+                            <img src="static/images/ai-technology.png" alt="">
+                            <h3>Computer Vision AI</h3>
+                            <p>Using OpenCV or face_recognition.</p>
+                        </div>
+                    </a>
+                    <a href="#" onclick="openVideo('static/video/VID-20260211-WA0000-2.mp4')" class="col-lg-3 col-md-6 col-sm-12 sarvices-card">
+                        <div class="services-cantent">
+                            <img src="static/images/machine-learning.png" alt="">
+                            <h3>ALPR </h3>
+                            <p>Automatic License Plate Recognition (ALPR)</p>
+                        </div>
+                    </a>
+                    <a href="#" onclick="openVideo('static/video/Food Dish Prediction - Google Chrome 2026-02-11 17-02-02.mp4')" class="col-lg-3 col-md-6 col-sm-12 sarvices-card">
+                        <div class="services-cantent">
+                            <img src="static/images/machine-learning.png" alt="">
+                            <h3>Prediction AI </h3>
+                            <p>Using machine learning models for prediction.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+  <div class="background-ring"></div>
+
+    </main>
+    
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Demo Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="demoVideo" width="100%" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <!-- radio button -->
+         <script>
+    // Attach event listener to all radio buttons
+    document.querySelectorAll('input[name="redirect"]').forEach(radio => {
+      radio.addEventListener('click', function() {
+        window.location.href = this.value; // Redirect on click
+      });
+    });
+    
+    // Function to open video modal
+    function openVideo(videoSrc) {
+        const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+        const video = document.getElementById('demoVideo');
+        video.src = videoSrc;
+        videoModal.show();
+        
+        // Stop video when modal is closed
+        document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+            video.pause();
+            video.src = '';
+        });
+    }
+  </script>
+</body>
+
+</html>
